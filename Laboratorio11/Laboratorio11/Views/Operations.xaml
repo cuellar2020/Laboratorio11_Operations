@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewmodels="clr-namespace:Laboratorio11.ViewModels"
+             x:DataType="viewmodels:OperationsViewModel"
+             x:Class="Laboratorio11.Views.Operations">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                
+                <Label Text="Valor 1" Padding="5"/>
+                <Editor Text="{ Binding Valor1}" Margin="10"/>
+                <Label Text="Valor 2" Padding="5"/>
+                <Editor Text="{ Binding Valor2}" Margin="10" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Sumar" Command="{ Binding Sumar}" />
+                <Label Text="{ Binding ResultSuma }" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Restar" Command="{ Binding Restar}" />
+                <Label Text="{ Binding ResultResta }" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Multiplicar" Command="{ Binding Multiplicar}" />
+                <Label Text="{ Binding ResultMultiplicacion }" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Dividir" Command="{ Binding Dividir}" />
+                <Label Text="{ Binding ResultDivision }" HorizontalOptions="Center"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
